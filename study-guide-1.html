@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Fundamentals | PTC Study</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">PTC<span>.Study</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#guides" class="nav-link active">Guides</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="section" style="padding-top: 120px; padding-bottom: var(--space-md);">
+        <div class="container">
+            <a href="index.html"
+                style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); margin-bottom: var(--space-sm); font-size: 0.9rem;">
+                ← Back to Home
+            </a>
+            <h1>HTML & CSS Fundamentals</h1>
+            <p style="max-width: 800px; font-size: 1.25rem;">
+                Targeted review of the Box Model, Display properties, and semantics.
+                Focus on the areas that commonly trip up students.
+            </p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="container" style="padding-bottom: var(--space-xl);">
+
+        <div class="grid gap-md">
+
+            <!-- 1. The CSS Box Model -->
+            <section class="card" id="box-model">
+                <div class="flex justify-between items-center" style="margin-bottom: var(--space-md);">
+                    <h2 style="margin: 0;">1️⃣ The CSS Box Model</h2>
+                    <span
+                        style="background: var(--accent); color: white; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: bold;">High
+                        Priority</span>
+                </div>
+
+                <div class="grid grid-cols-2" style="gap: var(--space-lg); align-items: start;">
+                    <div>
+                        <p>Every HTML element is a box made of four layers. Understanding the order is critical.</p>
+                        <ul style="margin: var(--space-sm) 0; padding-left: var(--space-md);">
+                            <li style="margin-bottom: 0.5rem;"><strong>Content</strong>: The text or image.</li>
+                            <li style="margin-bottom: 0.5rem; color: var(--success);"><strong>Padding</strong>: Space
+                                between content and border. (Inside)</li>
+                            <li style="margin-bottom: 0.5rem; color: var(--secondary);"><strong>Border</strong>: Outline
+                                around padding.</li>
+                            <li style="margin-bottom: 0.5rem; color: var(--accent);"><strong>Margin</strong>: Space
+                                outside the element. (Outside)</li>
+                        </ul>
+
+                        <div
+                            style="background: rgba(255,255,255,0.05); padding: var(--space-sm); border-radius: var(--radius-sm); border-left: 4px solid var(--warning);">
+                            <strong style="color: var(--warning); display: block; margin-bottom: 0.5rem;">❗ Common
+                                Confusion</strong>
+                            <p style="font-size: 0.95rem; margin: 0;">Margin is <em>outside</em>. Padding is
+                                <em>inside</em>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Visual Interactive Demo -->
+                    <div class="box-model-demo-container"
+                        style="display: flex; justify-content: center; align-items: center; background: #000; border-radius: var(--radius-sm); padding: var(--space-md);">
+                        <div
+                            style="position: relative; width: 200px; height: 150px; background: #38bdf8; display: flex; justify-content: center; align-items: center; border: 4px solid #818cf8; margin: 20px;">
+                            <span style="z-index: 2; color: #000; font-weight: bold;">Content</span>
+
+                            <!-- Labels -->
+                            <div
+                                style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); font-size: 0.7rem; color: #818cf8;">
+                                Border</div>
+                            <div
+                                style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); font-size: 0.7rem; color: rgba(0,0,0,0.5);">
+                                Padding</div>
+                            <div
+                                style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); font-size: 0.7rem; color: #f472b6;">
+                                Margin (Outside)</div>
+
+                            <!-- Margin Visual -->
+                            <div
+                                style="position: absolute; inset: -20px; border: 1px dashed #f472b6; pointer-events: none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Box Sizing -->
+            <section class="card">
+                <h2>2️⃣ box-sizing: border-box</h2>
+                <p>The solution to "growing" elements. It includes padding and border in the element's total width.</p>
+
+                <div class="grid grid-cols-2" style="margin-top: var(--space-sm);">
+                    <div>
+                        <h4>Why it matters:</h4>
+                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Keeps layouts predictable.</li>
+                            <li>Prevents horizontal scrollbars unexpectedly.</li>
+                            <li>Standard in modern CSS resets.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <pre><code>* {
+  box-sizing: border-box;
+}</code></pre>
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--success);">📌 Correct Answer Reminder:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">box-sizing:
+                        border-box;</span>
+                </div>
+            </section>
+
+            <!-- 3. CSS Definition -->
+            <section class="card">
+                <h2>3️⃣ What CSS Stands For</h2>
+                <div class="flex items-center gap-md">
+                    <h3
+                        style="margin: 0; font-size: 2rem; background: var(--gradient-hero); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        Cascading Style Sheets</h3>
+                </div>
+                <p style="margin-top: var(--space-sm);">Why "Cascading"? Because styles override each other based on
+                    priority rules (Specificity + Order).</p>
+            </section>
+
+            <!-- 4. External Stylesheets -->
+            <section class="card">
+                <h2>4️⃣ External Stylesheets</h2>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <p>A separate <code>.css</code> file controlling styles for multiple pages.</p>
+                        <h4 style="margin-top: var(--space-sm);">Benefits:</h4>
+                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Cleaner HTML</li>
+                            <li>Reusable Code</li>
+                            <li>Easier Maintenance</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Correct Syntax:</h4>
+                        <pre
+                            style="white-space: pre-wrap;"><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Responsive Units -->
+            <section class="card">
+                <h2>5️⃣ Responsive Font Units</h2>
+                <table style="width: 100%; text-align: left; border-collapse: collapse; margin: var(--space-sm) 0;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <th style="padding: 10px;">Unit</th>
+                            <th style="padding: 10px;">Responsive?</th>
+                            <th style="padding: 10px;">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <td style="padding: 10px; color: var(--error);">px</td>
+                            <td style="padding: 10px;">❌ No</td>
+                            <td style="padding: 10px; color: var(--text-secondary);">Fixed size. Doesn't scale well.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; color: var(--success); font-weight: bold;">em / rem</td>
+                            <td style="padding: 10px;">✅ Yes</td>
+                            <td style="padding: 10px; color: var(--text-secondary);">Scales with parent or root font
+                                size.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Winner:</strong> <code>em</code> or <code>rem</code> for responsive design.</p>
+            </section>
+
+            <!-- 6. Not Box Model -->
+            <section class="card">
+                <h2>6️⃣ What is NOT in the Box Model?</h2>
+                <div class="flex gap-md flex-wrap">
+                    <div
+                        style="flex: 1; border: 1px solid var(--success); padding: var(--space-sm); border-radius: var(--radius-sm); text-align: center;">
+                        <h4 style="color: var(--success);">✅ Included</h4>
+                        <p>Content, Padding, Border, Margin</p>
+                    </div>
+                    <div
+                        style="flex: 1; border: 1px solid var(--error); padding: var(--space-sm); border-radius: var(--radius-sm); text-align: center;">
+                        <h4 style="color: var(--error);">❌ Excluded</h4>
+                        <p><strong>Absolute</strong> (This is positioning, not a layer)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7 & 8. Quotes & Citations -->
+            <section class="card">
+                <h2>7️⃣ & 8️⃣ Quotes & Citations</h2>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <h3>Blockquotes</h3>
+                        <p>Used for longer quoted passages.</p>
+                        <pre><code>&lt;blockquote&gt;
+  "Design is intelligence made visible."
+&lt;/blockquote&gt;</code></pre>
+                    </div>
+                    <div>
+                        <h3>The <code>cite</code> Attribute</h3>
+                        <p>Provides the source URL for search engines/accessibility.</p>
+                        <pre><code>&lt;blockquote cite="url..."&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. Nested Lists -->
+            <section class="card">
+                <h2>9️⃣ Nested Lists</h2>
+                <p style="color: var(--warning);">⚠️ Common Mistake Alert</p>
+                <div class="grid grid-cols-2">
+                    <div style="opacity: 0.6;">
+                        <h4>❌ Incorrect</h4>
+                        <pre><code>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;ul&gt; &lt;!-- WRONG position --&gt;
+    &lt;li&gt;Subitem&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                    <div style="border: 2px solid var(--success); border-radius: var(--radius-sm);">
+                        <h4
+                            style="background: var(--success); color: #000; padding: 5px 10px; display: inline-block; border-radius: 0 0 8px 0;">
+                            ✅ Correct</h4>
+                        <pre style="background: transparent; border: none; margin: 0;"><code>&lt;ul&gt;
+  &lt;li&gt;
+    Parent Item
+    &lt;ul&gt; &lt;!-- Inside the LI --&gt;
+      &lt;li&gt;Nested Item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. Tables -->
+            <section class="card">
+                <h2>🔟 Table Row Grouping</h2>
+                <p>Use <code>&lt;tbody&gt;</code> to group body rows together.</p>
+                <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-secondary);">
+                    <li>Better for styling specific sections.</li>
+                    <li>helps browser render large tables faster.</li>
+                    <li>Needed for accessibility.</li>
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- Quick Summary Footer -->
+        <div style="margin-top: var(--space-xl); text-align: center;">
+            <h3 style="margin-bottom: var(--space-md);">🧠 Quick Memory Triggers</h3>
+            <div class="flex flex-wrap justify-center gap-sm">
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">Padding = Pillow Inside</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">Margin = Space Outside</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">Lists inside LI</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">em = Responsive</span>
+            </div>
+            <br><br>
+            <a href="index.html" class="btn btn-primary">Done Studying</a>
+        </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
