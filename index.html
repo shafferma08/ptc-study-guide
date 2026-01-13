@@ -16,6 +16,11 @@
     <nav class="navbar">
         <div class="container nav-content">
             <a href="index.html" class="logo">PTC<span>.Study</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
                 <a href="index.html" class="nav-link active">Home</a>
                 <a href="#guides" class="nav-link">Guides</a>
@@ -25,7 +30,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="section flex flex-col items-center justify-center" style="min-height: 80vh; text-align: center;">
+    <header class="section flex flex-col items-center justify-center"
+        style="min-height: 60vh; text-align: center; padding-top: var(--space-xl);">
         <div class="container">
             <h1 class="animate-float">Master the Code.<br>Ace the Exam.</h1>
             <p style="max-width: 600px; margin: 0 auto var(--space-md);">
@@ -34,7 +40,7 @@
             </p>
             <div class="flex gap-md justify-center">
                 <a href="#guides" class="btn btn-primary">Start Studying</a>
-                <a href="#about" class="btn btn-secondary">Learn More</a>
+                <a href="#resources" class="btn btn-secondary">Free Resources</a>
             </div>
         </div>
 
@@ -72,6 +78,81 @@
                     <p>Coming Soon. Variables, Loops, and DOM Manipulation.</p>
                     <button class="btn btn-secondary" disabled
                         style="width: 100%; margin-top: var(--space-md); cursor: not-allowed;">Locked</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Fun Free Resources</h2>
+            <p style="margin-bottom: var(--space-md);">Interactive games and essential documentation to master your
+                skills.</p>
+            <div class="grid grid-cols-3">
+                <!-- Interactive Games -->
+                <article class="card resource-card">
+                    <h3>🐸 Flexbox Froggy</h3>
+                    <p>A game for learning CSS Flexbox. Guide the frog to the lilypad using flex properties.</p>
+                    <a href="https://flexboxfroggy.com/" target="_blank" class="btn btn-secondary"
+                        style="margin-top: var(--space-sm); width: 100%;">Play Now</a>
+                </article>
+
+                <article class="card resource-card">
+                    <h3>🥕 Grid Garden</h3>
+                    <p>A game for learning CSS Grid. Grow your carrot garden by mastering grid columns and rows.</p>
+                    <a href="https://cssgridgarden.com/" target="_blank" class="btn btn-secondary"
+                        style="margin-top: var(--space-sm); width: 100%;">Play Now</a>
+                </article>
+
+                <article class="card resource-card">
+                    <h3>🍽️ CSS Diner</h3>
+                    <p>It's a little table to help you learn about CSS selectors. Select the plates and enjoy!</p>
+                    <a href="https://flukeout.github.io/" target="_blank" class="btn btn-secondary"
+                        style="margin-top: var(--space-sm); width: 100%;">Play Now</a>
+                </article>
+
+                <article class="card resource-card">
+                    <h3>⚔️ CSS Battle</h3>
+                    <p>Use your CSS skills to replicate targets with the smallest code possible. Competitive coding!</p>
+                    <a href="https://cssbattle.dev/" target="_blank" class="btn btn-secondary"
+                        style="margin-top: var(--space-sm); width: 100%;">Play Now</a>
+                </article>
+
+                <!-- Documentation & Guides -->
+                <article class="card resource-card" style="border-color: var(--primary);">
+                    <h3>📚 MDN Web Docs</h3>
+                    <p>The bible of web development. The best reference for HTML, CSS, and JS standards.</p>
+                    <a href="https://developer.mozilla.org/" target="_blank" class="btn btn-primary"
+                        style="margin-top: var(--space-sm); width: 100%;">Read Docs</a>
+                </article>
+
+                <article class="card resource-card">
+                    <h3>🎓 freeCodeCamp</h3>
+                    <p>Learn to code for free with interactive lessons, projects, and certifications.</p>
+                    <a href="https://www.freecodecamp.org/" target="_blank" class="btn btn-secondary"
+                        style="margin-top: var(--space-sm); width: 100%;">Start Learning</a>
+                </article>
+
+                <article class="card resource-card">
+                    <h3>⚡ W3Schools</h3>
+                    <p>Simple tutorials and references with "Try It Yourself" editors for quick learning.</p>
+                    <a href="https://www.w3schools.com/" target="_blank" class="btn btn-secondary"
+                        style="margin-top: var(--space-sm); width: 100%;">Visit Site</a>
+                </article>
+
+                <article class="card resource-card">
+                    <h3>🎨 CSS-Tricks</h3>
+                    <p>A daily updated site about all things CSS. Great complete guides to Flexbox & Grid.</p>
+                    <a href="https://css-tricks.com/" target="_blank" class="btn btn-secondary"
+                        style="margin-top: var(--space-sm); width: 100%;">Learn Tricks</a>
+                </article>
+
+                <article class="card resource-card">
+                    <h3>🚀 The Odin Project</h3>
+                    <p>A full stack curriculum that is free and supported by a widely used open source community.</p>
+                    <a href="https://www.theodinproject.com/" target="_blank" class="btn btn-secondary"
+                        style="margin-top: var(--space-sm); width: 100%;">View Course</a>
                 </article>
             </div>
         </div>
