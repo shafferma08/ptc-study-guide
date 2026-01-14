@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targeted Study Guide #3 | PTC Study</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">PTC<span>.Study</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#guides" class="nav-link active">Guides</a>
+                <a href="index.html#resources" class="nav-link">Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="section" style="padding-top: 120px; padding-bottom: var(--space-md);">
+        <div class="container">
+            <a href="index.html"
+                style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); margin-bottom: var(--space-sm); font-size: 0.9rem;">
+                ← Back to Home
+            </a>
+            <h1>Targeted Study Guide #3</h1>
+            <p style="max-width: 800px; font-size: 1.25rem;">
+                Tables, Forms, Selectors, and Media behavior.
+                Mastering specific HTML tags and CSS logic.
+            </p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="container" style="padding-bottom: var(--space-xl);">
+
+        <div class="grid gap-md">
+
+            <!-- 1. Table Titles -->
+            <section class="card">
+                <div class="flex justify-between items-center" style="margin-bottom: var(--space-md);">
+                    <h2 style="margin: 0;">1️⃣ Table Titles & Captions</h2>
+                </div>
+                <p>Use the <code>&lt;caption&gt;</code> tag to add a title to a table.</p>
+
+                <div class="grid grid-cols-2" style="margin-top: var(--space-sm);">
+                    <div>
+                        <pre><code>&lt;table&gt;
+  &lt;caption&gt;Student Grades&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;...
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--error);">❌ Common Mistakes</h4>
+                        <ul style="list-style: none; padding-left: 0; color: var(--text-secondary);">
+                            <li><span style="color: var(--error);">&lt;thead&gt;</span> (For grouping headers, not
+                                titles)</li>
+                            <li><span style="color: var(--error);">&lt;header&gt;</span> (For page/section headers)</li>
+                            <li><span style="color: var(--error);">&lt;title&gt;</span> (For browser tabs only)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">&lt;caption&gt;</span>
+                </div>
+            </section>
+
+            <!-- 2. Form Action -->
+            <section class="card">
+                <h2>2️⃣ HTML Forms: Where the Data Goes</h2>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <p>The <code>action</code> attribute defines the destination URL where the form submits its
+                            data.</p>
+                        <table style="width: 100%; margin-top: 0.5rem; border-collapse: collapse;">
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 4px; color: var(--accent);">action</td>
+                                <td style="padding: 4px;">Where data goes</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px; color: var(--secondary);">method</td>
+                                <td style="padding: 4px;">How data is sent (GET/POST)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <pre><code>&lt;form action="process.php"&gt;</code></pre>
+                        <p style="font-size: 0.9rem; color: var(--error); margin-top: 0.5rem;">❌ Not: url, location, or
+                            sendto</p>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">action</span>
+                </div>
+            </section>
+
+            <!-- 3. Browser Compatibility -->
+            <section class="card">
+                <h2>3️⃣ Cross-Browser Compatibility (Historical)</h2>
+                <p>Certification exams often test historical context regarding browser support.</p>
+                <div
+                    style="background: rgba(248, 113, 113, 0.1); padding: var(--space-sm); border-radius: var(--radius-sm); border-left: 4px solid var(--error);">
+                    <h4 style="color: var(--error); margin-bottom: 0.5rem;">⚠️ Internet Explorer</h4>
+                    <p>Historically known for inconsistent rendering, requiring "hacks" and vendor prefixes.</p>
+                </div>
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">Internet Explorer</span>
+                </div>
+            </section>
+
+            <!-- 4. Specificity -->
+            <section class="card">
+                <h2>4️⃣ CSS Specificity & Overrides</h2>
+                <p><strong>Scenario:</strong> Parent <code>&lt;div&gt;</code> is blue. Child <code>&lt;p&gt;</code> is
+                    red.</p>
+
+                <div class="grid grid-cols-2" style="align-items: center;">
+                    <div style="position: relative;">
+                        <div style="border: 2px solid #38bdf8; padding: 1rem; color: #38bdf8; border-radius: 4px;">
+                            div { color: blue; }
+                            <div
+                                style="border: 2px solid #f87171; padding: 0.5rem; color: #f87171; margin-top: 0.5rem; background: rgba(0,0,0,0.2); border-radius: 4px;">
+                                p { color: red; }
+                                <br>
+                                Result: I am Red.
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem;">Why?</h4>
+                        <ul style="list-style: disc; padding-left: 1.5rem;">
+                            <li>Direct styles override inherited styles.</li>
+                            <li>More specific selector wins.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">The color defined in the
+                        paragraph</span>
+                </div>
+            </section>
+
+            <!-- 5. Pseudo-Elements -->
+            <section class="card">
+                <h2>5️⃣ CSS Pseudo-Elements</h2>
+                <pre><code>p::first-line { font-family: helvetica; }</code></pre>
+                <p style="margin-top: 0.5rem;">It styles a <strong>portion</strong> of an element, not the whole thing.
+                </p>
+                <div style="display: flex; gap: var(--space-md); margin-top: var(--space-sm);">
+                    <div style="flex: 1;">
+                        <h4 style="color: var(--success);">✅ True</h4>
+                        <p style="font-size: 0.9rem;">::first-line is a pseudo-element</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4 style="color: var(--error);">❌ Not</h4>
+                        <p style="font-size: 0.9rem;">Class, Element, or "Tabled Item"</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Video -->
+            <section class="card">
+                <h2>6️⃣ Embedding Video</h2>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <strong style="color: var(--success);">✅ The HTML5 Way</strong>
+                        <pre style="margin-top: 0.5rem;"><code>&lt;video controls&gt;
+  &lt;source src="mv.mp4"&gt;
+&lt;/video&gt;</code></pre>
+                    </div>
+                    <div>
+                        <strong style="color: var(--error);">❌ Incorrect</strong>
+                        <ul style="list-style: none; padding: 0; margin-top: 0.5rem; color: var(--text-secondary);">
+                            <li>&lt;embed&gt; (Old/Generic)</li>
+                            <li>&lt;media&gt; (Fake)</li>
+                            <li>&lt;mp4&gt; (Not a tag)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">&lt;video&gt;</span>
+                </div>
+            </section>
+
+            <!-- 7. Dropdowns -->
+            <section class="card">
+                <h2>7️⃣ HTML Dropdown Lists</h2>
+                <div class="flex items-center gap-md">
+                    <pre style="margin: 0; flex-grow: 1;"><code>&lt;select&gt;
+  &lt;option&gt;1&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                    <div style="background: white; padding: 5px; border-radius: 4px;">
+                        <select style="font-size: 1rem; padding: 4px;">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">&lt;select&gt;</span>
+                </div>
+            </section>
+
+            <!-- 8. Passwords -->
+            <section class="card">
+                <h2>8️⃣ Password Inputs</h2>
+                <p><code>&lt;input type="password"&gt;</code></p>
+                <div
+                    style="background: rgba(251, 191, 36, 0.1); padding: var(--space-sm); border-radius: var(--radius-sm); margin-bottom: var(--space-sm);">
+                    <h4 style="color: var(--warning); margin-bottom: 0.5rem;">⚠️ Creating Real Understanding</h4>
+                    <p style="margin: 0;">Password inputs <strong>MASK</strong> characters. They do <strong>NOT</strong>
+                        encrypt or secure data by themselves. Security happens on the server.</p>
+                </div>
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">Password boxes mask the
+                        entered characters</span>
+                </div>
+            </section>
+
+            <!-- 9. Siblings -->
+            <section class="card">
+                <h2>9️⃣ Adjacent Sibling Selector</h2>
+                <p>Selects the element <strong>immediately after</strong> another.</p>
+                <div class="grid grid-cols-2" style="gap: var(--space-lg);">
+                    <div>
+                        <div
+                            style="display: flex; align-items: center; justify-content: center; height: 100px; gap: 10px;">
+                            <div style="border: 1px dashed #666; padding: 10px;">div</div>
+                            <span style="font-size: 1.5rem;">+</span>
+                            <div style="border: 2px solid var(--accent); padding: 10px; color: var(--accent);">p</div>
+                            <div style="border: 1px dashed #666; padding: 10px; opacity: 0.5;">p</div>
+                        </div>
+                    </div>
+                    <div>
+                        <table style="width: 100%; font-size: 0.9rem;">
+                            <tr>
+                                <td style="color: var(--success); font-weight: bold; padding: 4px;">div + p</td>
+                                <td style="padding: 4px;">Immediate Sibling</td>
+                            </tr>
+                            <tr>
+                                <td style="color: var(--text-secondary); padding: 4px;">div ~ p</td>
+                                <td style="padding: 4px;">Any Following Sibling</td>
+                            </tr>
+                            <tr>
+                                <td style="color: var(--text-secondary); padding: 4px;">div > p</td>
+                                <td style="padding: 4px;">Direct Child</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">div + p</span>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Quick Summary Footer -->
+        <div style="margin-top: var(--space-xl); text-align: center;">
+            <h3 style="margin-bottom: var(--space-md);">🧠 Exam Memory Triggers</h3>
+            <div class="flex flex-wrap justify-center gap-sm">
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">Table titles = &lt;caption&gt;</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">Form destination = action</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">IE = browser pain</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">:: = pseudo-element</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">Videos use &lt;video&gt;</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">Dropdowns use &lt;select&gt;</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">+ means "right after"</span>
+            </div>
+            <br><br>
+            <a href="index.html" class="btn btn-primary">Done Studying</a>
+        </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

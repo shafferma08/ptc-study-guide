@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targeted Study Guide #2 | PTC Study</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">PTC<span>.Study</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#guides" class="nav-link active">Guides</a>
+                <a href="index.html#resources" class="nav-link">Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="section" style="padding-top: 120px; padding-bottom: var(--space-md);">
+        <div class="container">
+            <a href="index.html"
+                style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); margin-bottom: var(--space-sm); font-size: 0.9rem;">
+                ← Back to Home
+            </a>
+            <h1>Targeted Study Guide #2</h1>
+            <p style="max-width: 800px; font-size: 1.25rem;">
+                Advanced topics covering CSS Grid, Forms, APIs, and Web Components.
+                Master the details that commonly appear on certification exams.
+            </p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="container" style="padding-bottom: var(--space-xl);">
+
+        <div class="grid gap-md">
+
+            <!-- 1. CSS Inheritance -->
+            <section class="card">
+                <div class="flex justify-between items-center" style="margin-bottom: var(--space-md);">
+                    <h2 style="margin: 0;">1️⃣ CSS Inheritance</h2>
+                    <span
+                        style="background: var(--accent); color: white; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: bold;">Key
+                        Rule</span>
+                </div>
+                <p>Some CSS properties inherit automatically from parent to child, while others do not.</p>
+
+                <div class="grid grid-cols-2" style="margin-top: var(--space-sm);">
+                    <div
+                        style="background: rgba(52, 211, 153, 0.1); padding: var(--space-sm); border-radius: var(--radius-sm);">
+                        <h4 style="color: var(--success); margin-bottom: 0.5rem;">✅ Inherited</h4>
+                        <ul style="list-style: disc; padding-left: 1.5rem;">
+                            <li>color</li>
+                            <li>font-family</li>
+                            <li>line-height</li>
+                            <li>text-align</li>
+                        </ul>
+                    </div>
+                    <div
+                        style="background: rgba(248, 113, 113, 0.1); padding: var(--space-sm); border-radius: var(--radius-sm);">
+                        <h4 style="color: var(--error); margin-bottom: 0.5rem;">❌ NOT Inherited</h4>
+                        <ul style="list-style: disc; padding-left: 1.5rem;">
+                            <li><strong>background-color</strong></li>
+                        </ul>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+                            <strong>Why?</strong> Backgrounds belong to the element's box, not its text content.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">background-color</span>
+                </div>
+            </section>
+
+            <!-- 2. CSS Grid: Defining Columns -->
+            <section class="card">
+                <h2>2️⃣ CSS Grid: Defining Columns</h2>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <p>Use <code>grid-template-columns</code> to define the layout of columns in a grid container.
+                        </p>
+                        <h4 style="margin-top: var(--space-sm); color: var(--error);">❌ Common Confusion</h4>
+                        <ul style="list-style: none; padding-left: 0; color: var(--text-secondary);">
+                            <li><span style="color: var(--error);">grid-columns</span> (Not a property)</li>
+                            <li><span style="color: var(--error);">column-count</span> (For multi-column text)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <pre><code>.container {
+  display: grid;
+  /* Creates 3 equal columns */
+  grid-template-columns: 1fr 1fr 1fr;
+}</code></pre>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">grid-template-columns</span>
+                </div>
+            </section>
+
+            <!-- 3. Facebook "Like" Button Integration -->
+            <section class="card">
+                <h2>3️⃣ Facebook "Like" Button Integration</h2>
+                <p>The easiest way to add social features without complex coding.</p>
+
+                <div class="grid grid-cols-2" style="margin-top: var(--space-sm);">
+                    <div>
+                        <h4 style="color: var(--success);">✅ Facebook Plugins</h4>
+                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Pre-built & embeddable</li>
+                            <li>No custom API coding required</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--error);">❌ Incorrect Approaches</h4>
+                        <ul style="list-style: cross; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Facebook REST API</li>
+                            <li>Facebook OAuth</li>
+                            <li>Facebook Authentication</li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">Facebook Plugins</span>
+                </div>
+            </section>
+
+            <!-- 4. HTML Forms: GET vs POST -->
+            <section class="card">
+                <h2>4️⃣ HTML Forms: GET vs POST</h2>
+                <p>The <code>method</code> attribute controls how form data is sent.</p>
+
+                <div class="grid grid-cols-2" style="gap: var(--space-lg);">
+                    <div style="border-left: 4px solid var(--warning); padding-left: var(--space-sm);">
+                        <h4>GET</h4>
+                        <p style="font-size: 0.9rem;">Data visible in URL. Used for searches.</p>
+                    </div>
+                    <div style="border-left: 4px solid var(--success); padding-left: var(--space-sm);">
+                        <h4>POST</h4>
+                        <p style="font-size: 0.9rem;">Data in request body. Secure. Used for passwords/submits.</p>
+                    </div>
+                </div>
+
+                <pre
+                    style="margin-top: var(--space-sm);"><code>&lt;form method="post"&gt; ... &lt;/form&gt;</code></pre>
+
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">method</span>
+                    <span style="color: var(--text-secondary); font-size: 0.9rem; margin-left: var(--space-sm);">(Not:
+                        data-send, send-method)</span>
+                </div>
+            </section>
+
+            <!-- 5. Google Maps API -->
+            <section class="card">
+                <h2>5️⃣ Google Maps JavaScript API</h2>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <h4>Container Element</h4>
+                        <p>The map uses a standard <code>&lt;div&gt;</code> as a flexible container which is then styled
+                            via CSS.</p>
+                        <p style="color: var(--error); font-size: 0.9rem; margin-top: 0.5rem;">❌ Not &lt;iframe&gt;,
+                            &lt;map&gt;, or &lt;googlemap&gt;</p>
+                        <div style="margin-top: var(--space-sm);">
+                            <strong style="color: var(--primary);">👉 Answer:</strong> <code>&lt;div&gt;</code>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Initialization Function</h4>
+                        <p>The standard callback function expected by the API.</p>
+                        <pre><code>function initMap() {
+  // map setup
+}</code></pre>
+                        <div style="margin-top: var(--space-sm);">
+                            <strong style="color: var(--primary);">👉 Answer:</strong> <code>initMap()</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Pseudo-Classes: First Child -->
+            <section class="card">
+                <h2>6️⃣ Pseudo-Classes: :first-child</h2>
+                <p>Selects the very first child element of a parent.</p>
+
+                <div class="grid grid-cols-2" style="align-items: center;">
+                    <div>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: var(--space-sm);">
+                                <code style="color: var(--success); font-weight: bold;">:first-child</code>
+                                <br><span style="font-size: 0.9rem; color: var(--text-secondary);">First element of ANY
+                                    type.</span>
+                            </li>
+                            <li>
+                                <code style="color: var(--success); font-weight: bold;">:nth-child(1)</code>
+                                <br><span style="font-size: 0.9rem; color: var(--text-secondary);">Same as
+                                    first-child.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="opacity: 0.7;">
+                        <h4 style="font-size: 1rem;">Contrast with:</h4>
+                        <code>:first-of-type</code>
+                        <p style="font-size: 0.9rem;">Selects the first of a <em>specific</em> tag.</p>
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                    <span style="color: var(--text-primary); margin-left: var(--space-xs);">:first-child</span>
+                </div>
+            </section>
+
+            <!-- 7. Web Components -->
+            <section class="card">
+                <h2>7️⃣ Custom HTML Elements</h2>
+                <p>Creating your own HTML tags (Web Components).</p>
+
+                <pre><code>window.customElements.define('my-card', MyCard);</code></pre>
+
+                <div class="grid grid-cols-2" style="margin-top: var(--space-sm);">
+                    <div>
+                        <strong style="color: var(--success);">✅ Correct Method</strong>
+                        <p>window.customElements.define()</p>
+                    </div>
+                    <div>
+                        <strong style="color: var(--error);">❌ Outdated</strong>
+                        <p>document.registerElement()</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. Shadow DOM -->
+            <section class="card">
+                <h2>8️⃣ Shadow DOM & Encapsulation</h2>
+                <p>A key part of Web Components that provides <strong>Encapsulation</strong>.</p>
+
+                <div class="grid grid-cols-2" style="margin-top: var(--space-sm);">
+                    <div
+                        style="background: rgba(129, 140, 248, 0.1); padding: var(--space-sm); border-radius: var(--radius-sm); border: 1px dashed var(--secondary);">
+                        <h4 style="color: var(--secondary);">✅ The Benefit</h4>
+                        <p>Styles defined inside a Shadow DOM do <strong>NOT</strong> leak out, and global styles do not
+                            leak in.</p>
+                    </div>
+                    <div>
+                        <h4>Member of the Tribe:</h4>
+                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Custom Elements</li>
+                            <li><strong>Shadow DOM</strong></li>
+                            <li>HTML Templates</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Quick Summary Footer -->
+        <div style="margin-top: var(--space-xl); text-align: center;">
+            <h3 style="margin-bottom: var(--space-md);">🧠 Rapid Memory Cues</h3>
+            <div class="flex flex-wrap justify-center gap-sm">
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">Backgrounds don’t inherit</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">Columns = grid-template-columns</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">Forms use method</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">Maps render in a &lt;div&gt;</span>
+                <span class="btn btn-secondary" style="font-size: 0.9rem;">:first-child ≠ :first-of-type</span>
+            </div>
+            <br><br>
+            <a href="index.html" class="btn btn-primary">Done Studying</a>
+        </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

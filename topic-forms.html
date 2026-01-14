@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Interaction | PTC Study</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">PTC<span>.Study</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#topics" class="nav-link active">Topics</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container grid"
+        style="grid-template-columns: 250px 1fr; gap: var(--space-lg); padding-top: 120px; padding-bottom: var(--space-xl);">
+
+        <!-- Sidebar Navigation -->
+        <aside style="position: sticky; top: 120px; height: fit-content;">
+            <div class="card" style="padding: var(--space-sm);">
+                <h4 style="margin-bottom: var(--space-sm); color: var(--text-secondary);">On This Page</h4>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="#methods" class="nav-link" style="font-size: 0.9rem;">GET vs POST</a></li>
+                    <li><a href="#attributes" class="nav-link" style="font-size: 0.9rem;">Form Attributes</a></li>
+                    <li><a href="#inputs" class="nav-link" style="font-size: 0.9rem;">Input Types</a></li>
+                    <li><a href="#dropdowns" class="nav-link" style="font-size: 0.9rem;">Dropdowns</a></li>
+                </ul>
+                <div
+                    style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                    <a href="index.html#topics" style="font-size: 0.85rem; color: var(--text-secondary);">← Back to All
+                        Topics</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header style="margin-bottom: var(--space-lg);">
+                <span
+                    style="color: var(--primary); font-weight: bold; letter-spacing: 1px; text-transform: uppercase; font-size: 0.9rem;">Module
+                    3</span>
+                <h1 style="font-size: 3rem; margin-top: 0.5rem;">Forms & Interaction</h1>
+                <p style="font-size: 1.25rem; color: var(--text-secondary);">Collecting user data: inputs, security best
+                    practices, and submission methods.</p>
+            </header>
+
+            <div class="grid gap-md">
+
+                <!-- GET vs POST -->
+                <section id="methods" class="card">
+                    <h2>HTML Forms: GET vs POST</h2>
+                    <p>The <code>method</code> attribute controls how form data is sent.</p>
+
+                    <div class="grid grid-cols-2" style="gap: var(--space-lg);">
+                        <div style="border-left: 4px solid var(--warning); padding-left: var(--space-sm);">
+                            <h4>GET</h4>
+                            <p style="font-size: 0.9rem;">Data visible in URL. Used for searches/filtering.</p>
+                        </div>
+                        <div style="border-left: 4px solid var(--success); padding-left: var(--space-sm);">
+                            <h4>POST</h4>
+                            <p style="font-size: 0.9rem;">Data in request body. Secure. Used for passwords/submits.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Action Attribute -->
+                <section id="attributes" class="card">
+                    <h2>Where the Data Goes</h2>
+                    <div class="grid grid-cols-2">
+                        <div>
+                            <p>The <code>action</code> attribute defines the destination URL where the form submits its
+                                data.</p>
+                            <table style="width: 100%; margin-top: 0.5rem; border-collapse: collapse;">
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                    <td style="padding: 4px; color: var(--accent);">action</td>
+                                    <td style="padding: 4px;">Where data goes</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; color: var(--secondary);">method</td>
+                                    <td style="padding: 4px;">How data is sent</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <pre><code>&lt;form action="process.php"&gt;</code></pre>
+                            <div
+                                style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                                <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                                <span style="color: var(--text-primary); margin-left: var(--space-xs);">action</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Input Types (Password) -->
+                <section id="inputs" class="card">
+                    <h2>Password Inputs</h2>
+                    <p><code>&lt;input type="password"&gt;</code></p>
+                    <div
+                        style="background: rgba(251, 191, 36, 0.1); padding: var(--space-sm); border-radius: var(--radius-sm); margin-bottom: var(--space-sm);">
+                        <h4 style="color: var(--warning); margin-bottom: 0.5rem;">⚠️ Creating Real Understanding</h4>
+                        <p style="margin: 0;">Password inputs <strong>MASK</strong> characters. They do
+                            <strong>NOT</strong> encrypt or secure data by themselves. Security happens on the server.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Dropdowns -->
+                <section id="dropdowns" class="card">
+                    <h2>Dropdown Lists</h2>
+                    <div class="flex items-center gap-md">
+                        <pre style="margin: 0; flex-grow: 1;"><code>&lt;select&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                        <div style="background: white; padding: 5px; border-radius: 4px;">
+                            <select style="font-size: 1rem; padding: 4px; min-width: 100px;">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div
+                        style="margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1);">
+                        <strong style="color: var(--primary);">👉 Correct Answer:</strong>
+                        <span style="color: var(--text-primary); margin-left: var(--space-xs);">&lt;select&gt;</span>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

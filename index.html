@@ -56,28 +56,126 @@
     <!-- Study Guides Grid -->
     <section id="guides" class="section">
         <div class="container">
-            <h2>Available Study Guides</h2>
-            <div class="grid grid-cols-2">
-                <!-- Guide 1 -->
+            <h2>Study Modules</h2>
+            <p style="margin-bottom: var(--space-lg); max-width: 700px; color: var(--text-secondary);">
+                Select a topic to begin studying. Content is organized by concept for easier revision.
+            </p>
+
+            <!-- HTML & CSS Grid -->
+            <div class="grid grid-cols-3" id="topics">
+
+                <!-- Module 1 -->
                 <article class="card">
-                    <h3>📘 HTML & CSS Fundamentals</h3>
-                    <p>Deep dive into the Box Model, Display properties, and Layout basics. Targeted review based on
-                        common missed questions.</p>
-                    <div class="flex items-center gap-sm" style="margin-top: var(--space-sm);">
-                        <span style="font-size: 0.9rem; color: var(--text-secondary);">10 Key Concepts</span>
-                        <span style="font-size: 0.9rem; color: var(--text-secondary);">•</span>
-                        <span style="font-size: 0.9rem; color: var(--text-secondary);">Interactive Demos</span>
+                    <div class="flex flex-col h-full justify-between">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <span
+                                    style="font-size: 2rem; margin-bottom: var(--space-sm); display: block;">🏛️</span>
+                                <span
+                                    style="font-size: 0.8rem; background: var(--bg-secondary); padding: 4px 8px; border-radius: 4px; color: var(--text-secondary);">Module
+                                    1</span>
+                            </div>
+                            <h3>Fundamentals</h3>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">Structure, The Cascade,
+                                Specificity, and Browser Behavior.</p>
+                        </div>
+                        <a href="topic-fundamentals.html" class="btn btn-primary"
+                            style="width: 100%; margin-top: var(--space-md);">Start Module</a>
                     </div>
-                    <a href="study-guide-1.html" class="btn btn-primary"
-                        style="width: 100%; margin-top: var(--space-md);">Open Guide</a>
                 </article>
 
-                <!-- Placeholder for future guides -->
-                <article class="card" style="opacity: 0.5;">
-                    <h3>🚧 JavaScript Basics</h3>
-                    <p>Coming Soon. Variables, Loops, and DOM Manipulation.</p>
-                    <button class="btn btn-secondary" disabled
-                        style="width: 100%; margin-top: var(--space-md); cursor: not-allowed;">Locked</button>
+                <!-- Module 2 -->
+                <article class="card">
+                    <div class="flex flex-col h-full justify-between">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <span style="font-size: 2rem; margin-bottom: var(--space-sm); display: block;">📐</span>
+                                <span
+                                    style="font-size: 0.8rem; background: var(--bg-secondary); padding: 4px 8px; border-radius: 4px; color: var(--text-secondary);">Module
+                                    2</span>
+                            </div>
+                            <h3>Layout</h3>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">The Box Model, Grid, Units, and
+                                Positioning logic.</p>
+                        </div>
+                        <a href="topic-layout.html" class="btn btn-primary"
+                            style="width: 100%; margin-top: var(--space-md);">Start Module</a>
+                    </div>
+                </article>
+
+                <!-- Module 3 -->
+                <article class="card">
+                    <div class="flex flex-col h-full justify-between">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <span style="font-size: 2rem; margin-bottom: var(--space-sm); display: block;">📝</span>
+                                <span
+                                    style="font-size: 0.8rem; background: var(--bg-secondary); padding: 4px 8px; border-radius: 4px; color: var(--text-secondary);">Module
+                                    3</span>
+                            </div>
+                            <h3>Forms</h3>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">Inputs, Methods (GET/POST),
+                                Security, and Validations.</p>
+                        </div>
+                        <a href="topic-forms.html" class="btn btn-primary"
+                            style="width: 100%; margin-top: var(--space-md);">Start Module</a>
+                    </div>
+                </article>
+
+                <!-- Module 4 -->
+                <article class="card">
+                    <div class="flex flex-col h-full justify-between">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <span style="font-size: 2rem; margin-bottom: var(--space-sm); display: block;">🎬</span>
+                                <span
+                                    style="font-size: 0.8rem; background: var(--bg-secondary); padding: 4px 8px; border-radius: 4px; color: var(--text-secondary);">Module
+                                    4</span>
+                            </div>
+                            <h3>Content</h3>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">Tables, Lists, Video/Media, and
+                                Semantic Tags.</p>
+                        </div>
+                        <a href="topic-content.html" class="btn btn-primary"
+                            style="width: 100%; margin-top: var(--space-md);">Start Module</a>
+                    </div>
+                </article>
+
+                <!-- Module 5 -->
+                <article class="card">
+                    <div class="flex flex-col h-full justify-between">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <span style="font-size: 2rem; margin-bottom: var(--space-sm); display: block;">🚀</span>
+                                <span
+                                    style="font-size: 0.8rem; background: var(--bg-secondary); padding: 4px 8px; border-radius: 4px; color: var(--text-secondary);">Module
+                                    5</span>
+                            </div>
+                            <h3>Advanced</h3>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">Web Components, APIs, Shadow
+                                DOM, and Pseudo-selectors.</p>
+                        </div>
+                        <a href="topic-advanced.html" class="btn btn-primary"
+                            style="width: 100%; margin-top: var(--space-md);">Start Module</a>
+                    </div>
+                </article>
+
+                <!-- JS -->
+                <article class="card" style="opacity: 0.5; border: 1px dashed var(--text-secondary);">
+                    <div class="flex flex-col h-full justify-between">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <span style="font-size: 2rem; margin-bottom: var(--space-sm); display: block;">⚡</span>
+                                <span
+                                    style="font-size: 0.8rem; background: var(--bg-secondary); padding: 4px 8px; border-radius: 4px; color: var(--text-secondary);">Future</span>
+                            </div>
+                            <h3>JavaScript</h3>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">Coming Soon. Variables, Loops,
+                                and DOM Manipulation.</p>
+                        </div>
+                        <button class="btn btn-secondary" disabled
+                            style="width: 100%; margin-top: var(--space-md); cursor: not-allowed">Locked</button>
+                    </div>
                 </article>
             </div>
         </div>
